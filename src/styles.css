@@ -1,17 +1,22 @@
+.container {
+  max-width: 600px;
+}
 #search-city {
   margin: 50px 15px;
   border-radius: 20px;
   max-width: 700px;
 }
 .mainsection {
-  background-color: rgba(185, 94, 58, 0.8);
+  background-color: rgba(125, 125, 125, 0.2);
   margin: 50px 15px;
   border-radius: 20px;
   font-family: "Open Sans", sans-serif;
   color: black;
+  padding: 15px;
 }
 .fivedays {
-  background-color: rgba(185, 94, 58, 0.8);
+  padding: 15px;
+  background-color: rgba(125, 125, 125, 0.2);
   margin: 50px 15px;
   border-radius: 20px;
   font-family: "Open Sans", sans-serif;
@@ -19,4 +24,5 @@
 }
 h1 {
   color: purple;
+  font-size: 30px;
 }
