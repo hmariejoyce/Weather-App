@@ -25,4 +25,23 @@
 h1 {
   color: purple;
   font-size: 30px;
+  text-align: left;
+}
+h4 {
+  text-align: right;
+  font-size: 15px;
+}
+.addfeatures {
+  list-style: none;
+}
+.mainlogo {
+  font-size: 40px;
+  margin-left: 60px;
+}
+#maintemp {
+  font-size: 30px;
+  margin-left: 45px;
+}
+.description {
+  margin-left: 45px;
 }
