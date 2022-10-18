@@ -49,8 +49,11 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
 }
+.fivedays img {
+  max-width: 70px;
+}
 h1 {
-  color: purple;
+  color: black;
   font-size: 30px;
   text-align: center;
   margin: 0px;
@@ -73,7 +76,7 @@ h4 {
   margin-top: 7px;
 }
 h3 img {
-  max-width: 80px;
+  max-width: 100px;
   display: block;
   margin: 0 auto;
   margin-bottom: -15px;
