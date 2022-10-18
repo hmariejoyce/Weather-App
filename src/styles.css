@@ -1,14 +1,33 @@
+body {
+  background: linear-gradient(
+    89.9deg,
+    rgb(208, 246, 255) 0.1%,
+    rgb(255, 237, 237) 47.9%,
+    rgb(255, 255, 231) 100.2%
+  );
+}
 .container {
   max-width: 600px;
 }
 #search-city {
-  margin: 50px 15px;
+  margin: 50px 15px 20px 15px;
   border-radius: 20px;
   max-width: 700px;
 }
+.btn {
+  background-color: rgb(255, 237, 237);
+  border-color: rgb(203, 202, 202);
+  color: grey;
+  font-weight: bolder;
+}
+.btn:hover {
+  background-color: rgb(208, 246, 255);
+  border: rgb(208, 246, 255);
+  color: grey;
+}
 .mainsection {
   background-color: rgba(125, 125, 125, 0.2);
-  margin: 50px 15px 20px 15px;
+  margin: 20px 15px 20px 15px;
   border-radius: 20px;
   font-family: "Open Sans", sans-serif;
   color: black;
@@ -27,6 +46,7 @@ h1 {
   color: purple;
   font-size: 30px;
   text-align: left;
+  margin: 0px;
 }
 h4 {
   text-align: right;
