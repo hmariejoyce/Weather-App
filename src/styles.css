@@ -97,6 +97,14 @@ h3 img {
   top: -12px;
   font-family: "Montserrat", sans-serif;
 }
+#temptype .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+#temptype .active:hover {
+  text-decoration: none;
+}
 
 .col-7 {
   text-align: center;
