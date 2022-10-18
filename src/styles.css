@@ -8,7 +8,7 @@
 }
 .mainsection {
   background-color: rgba(125, 125, 125, 0.2);
-  margin: 50px 15px;
+  margin: 50px 15px 20px 15px;
   border-radius: 20px;
   font-family: "Open Sans", sans-serif;
   color: black;
@@ -17,7 +17,7 @@
 .fivedays {
   padding: 15px;
   background-color: rgba(125, 125, 125, 0.2);
-  margin: 50px 15px;
+  margin: 20px 15px 20px 15px;
   border-radius: 20px;
   font-family: "Open Sans", sans-serif;
   color: black;
@@ -33,6 +33,11 @@ h4 {
 }
 .addfeatures {
   list-style: none;
+  padding-top: 10px;
+  padding-left: 1rem;
+}
+.features {
+  margin-top: 7px;
 }
 .mainlogo {
   font-size: 40px;
@@ -40,8 +45,13 @@ h4 {
 }
 #maintemp {
   font-size: 30px;
-  margin-left: 45px;
+  margin-left: 55px;
 }
 .description {
   margin-left: 45px;
+}
+#temptype {
+  font-size: 12px;
+  position: relative;
+  top: -12px;
 }
