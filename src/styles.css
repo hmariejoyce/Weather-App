@@ -80,10 +80,14 @@ h4 {
   margin-left: 55px;
   font-family: "Montserrat", sans-serif;
 }
-.description {
+#description {
   margin-left: 45px;
   font-family: "Montserrat", sans-serif;
 }
+#description::first-letter {
+  text-transform: capitalize;
+}
+
 #temptype {
   font-size: 12px;
   position: relative;

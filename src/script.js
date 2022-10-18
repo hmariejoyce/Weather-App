@@ -41,7 +41,6 @@ function newCity(event) {
   let searchInput = document.querySelector("#searchcity-text-input");
   let maincity = document.querySelector("#maincity");
   maincity.innerHTML = `${searchInput.value}`;
-
   search(searchInput.value);
 }
 
@@ -64,9 +63,15 @@ getCurrentWeather.addEventListener("click", displayCurrentWeather);
 
 function currentWeather(response) {
   let maintemp = document.querySelector("#maintemp");
-  maintemp.innerHTML = `${Math.round(response.data.main.temp)}`;
   let maincity = document.querySelector("#maincity");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  maintemp.innerHTML = `${Math.round(response.data.main.temp)}`;
   maincity.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function getLocation(position) {
