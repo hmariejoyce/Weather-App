@@ -35,7 +35,7 @@ body {
   border-radius: 20px;
   font-family: "Open Sans", sans-serif;
   color: black;
-  padding: 15px;
+  padding: 10px;
   box-shadow: 5px 5px 5px rgb(194, 193, 193);
 }
 .fivedays {
@@ -52,7 +52,7 @@ body {
 h1 {
   color: purple;
   font-size: 30px;
-  text-align: left;
+  text-align: center;
   margin: 0px;
   font-family: "Exo 2", sans-serif;
   font-weight: bolder;
@@ -67,22 +67,25 @@ h4 {
   padding-top: 10px;
   padding-left: 1rem;
   font-family: "Montserrat", sans-serif;
+  margin-top: 30px;
 }
 .features {
   margin-top: 7px;
 }
-.mainlogo {
-  font-size: 40px;
-  margin-left: 60px;
+h3 img {
+  max-width: 80px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: -15px;
 }
 #maintemp {
   font-size: 30px;
-  margin-left: 55px;
+  text-align: center;
   font-family: "Montserrat", sans-serif;
 }
 #description {
-  margin-left: 45px;
   font-family: "Montserrat", sans-serif;
+  text-align: center;
 }
 #description::first-letter {
   text-transform: capitalize;
@@ -93,4 +96,8 @@ h4 {
   position: relative;
   top: -12px;
   font-family: "Montserrat", sans-serif;
+}
+
+.col-7 {
+  text-align: center;
 }
