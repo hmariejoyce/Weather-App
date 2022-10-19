@@ -36,6 +36,29 @@ let ampm = now.getHours() >= 12 ? "PM" : "AM";
 
 h4.innerHTML = `${day}, ${month} ${date} ${hours}:${minutes} ${ampm}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector(".fivedays");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2"> ${day}
+      <br />
+      <span
+      ><img
+         src="https://openweathermap.org/img/wn/01d@2x.png"
+         alt="sunny"
+      /></span>
+      <br />
+      <div class="temp">83°F</div>
+      </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function newCity(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#searchcity-text-input");
@@ -117,3 +140,5 @@ let searchCity = document.querySelector("form");
 searchCity.addEventListener("submit", newCity);
 
 search("Virginia Beach");
+
+displayForecast();
