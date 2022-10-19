@@ -36,25 +36,42 @@ let ampm = now.getHours() >= 12 ? "PM" : "AM";
 
 h4.innerHTML = `${day}, ${month} ${date} ${hours}:${minutes} ${ampm}`;
 
-function displayForecast() {
-  console.log(response.data.daily);
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector(".fivedays");
+
   let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-      <div class="col-2"> ${day}
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
+      <div class="col-2"> ${formatDay(forecastDay.dt)}
       <br />
       <span
       ><img
-         src="https://openweathermap.org/img/wn/01d@2x.png"
+         src="https://openweathermap.org/img/wn/${
+           forecastDay.weather[0].icon
+         }@2x.png"
          alt="sunny"
       /></span>
       <br />
-      <div class="temp">83°F</div>
+      <span class="maxtemp">${Math.round(
+        forecastDay.temp.max
+      )}</span>° <span class="mintemp">${Math.round(
+          forecastDay.temp.min
+        )}</span>°
       </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
@@ -62,8 +79,8 @@ function displayForecast() {
 
 function getForecast(coordinates) {
   console.log(coordinates);
-  apiKey = `2980ff43226d67e53abfcdb6d457dcc8`;
-  apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
 }
 
