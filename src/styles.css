@@ -1,9 +1,8 @@
 body {
   background: linear-gradient(
-    89.9deg,
-    rgb(208, 246, 255) 0.1%,
-    rgb(255, 237, 237) 47.9%,
-    rgb(255, 255, 231) 100.2%
+    -20deg,
+    rgb(233, 222, 250) 0%,
+    rgb(251, 252, 219) 100%
   );
 }
 .container {
@@ -17,7 +16,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .btn {
-  background-color: rgb(255, 237, 237);
+  background-color: #ece3f8;
   border-color: rgb(203, 202, 202);
   color: grey;
   font-weight: bolder;
@@ -25,7 +24,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .btn:hover {
-  background-color: rgb(208, 246, 255);
+  background-color: #e0cff8;
   border: rgb(208, 246, 255);
   color: grey;
 }
