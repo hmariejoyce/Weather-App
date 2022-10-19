@@ -37,6 +37,7 @@ let ampm = now.getHours() >= 12 ? "PM" : "AM";
 h4.innerHTML = `${day}, ${month} ${date} ${hours}:${minutes} ${ampm}`;
 
 function displayForecast() {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector(".fivedays");
   let forecastHTML = `<div class="row">`;
   let days = ["Thu", "Fri", "Sat", "Sun"];
@@ -57,6 +58,13 @@ function displayForecast() {
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  apiKey = `2980ff43226d67e53abfcdb6d457dcc8`;
+  apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function newCity(event) {
@@ -101,6 +109,8 @@ function currentWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function getLocation(position) {
@@ -140,5 +150,3 @@ let searchCity = document.querySelector("form");
 searchCity.addEventListener("submit", newCity);
 
 search("Virginia Beach");
-
-displayForecast();
