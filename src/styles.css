@@ -50,8 +50,9 @@ body {
   font-size: 12px;
 }
 .fivedays img {
-  max-width: 70px;
+  max-width: 80px;
 }
+
 h1 {
   color: black;
   font-size: 30px;
@@ -86,6 +87,9 @@ h3 img {
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
+.col-7 {
+  text-align: center;
+}
 #description {
   font-family: "Montserrat", sans-serif;
   text-align: center;
@@ -108,9 +112,8 @@ h3 img {
 #temptype .active:hover {
   text-decoration: none;
 }
-
-.col-7 {
-  text-align: center;
+.mintemp {
+  color: rgb(134, 130, 130);
 }
 footer {
   text-align: center;

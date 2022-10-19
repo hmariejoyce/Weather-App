@@ -62,14 +62,13 @@ function displayForecast(response) {
          src="https://openweathermap.org/img/wn/${
            forecastDay.weather[0].icon
          }@2x.png"
-         alt="sunny"
       /></span>
       <br />
       <span class="maxtemp">${Math.round(
         forecastDay.temp.max
-      )}</span>° <span class="mintemp">${Math.round(
+      )}°</span> <span class="mintemp">${Math.round(
           forecastDay.temp.min
-        )}</span>°
+        )}°</span>
       </div>`;
     }
   });
